@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.shablcu.shalu.animations.MainActivity">
+
+    <TextView
+        android:id="@+id/nametv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Animations"
+        android:textColor="@color/green"
+        android:textSize="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        />
+
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/imageshalu"
+        android:layout_below="@id/nametv"
+        android:layout_alignLeft="@id/nametv"
+        android:layout_alignStart="@+id/nametv"
+        android:layout_alignRight="@+id/nametv"
+        android:layout_alignEnd="@+id/nametv" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zoom"
+        android:id="@+id/zoombutton"
+        android:layout_marginBottom="36dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="zoom"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="clockwise"
+        android:id="@+id/clockwisebutton"
+        android:layout_alignTop="@+id/zoombutton"
+        android:layout_centerHorizontal="true"
+        android:onClick="clockwise"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="fade"
+        android:id="@+id/fadebutton"
+        android:layout_above="@+id/slidebutton"
+        android:layout_toRightOf="@+id/image1"
+        android:layout_toEndOf="@+id/image1"
+        android:onClick="fade"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="blink"
+        android:id="@+id/blinkbutton"
+        android:layout_below="@id/clockwisebutton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="blink"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="move"
+        android:id="@+id/movebutton"
+        android:onClick="move"
+        android:layout_below="@+id/clockwisebutton"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="slide"
+        android:id="@+id/slidebutton"
+        android:onClick="slide"
+        android:layout_below="@+id/clockwisebutton"
+        android:layout_toRightOf="@+id/image1"
+        android:layout_toEndOf="@+id/image1" />
+</RelativeLayout>
